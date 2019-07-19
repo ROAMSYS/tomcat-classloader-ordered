@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>fr.openwide.tomcat</groupId>
 	<artifactId>tomcat-classloader-ordered</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 
 	<name>Tomcat - Ordered classloader</name>
 	<description>Tomcat classloader which orders jars by name before loading them</description>
@@ -11,22 +11,18 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.build.timestamp.format>yyyyMMdd</maven.build.timestamp.format>
+	
+		<tomcat.version>9.0.16</tomcat.version>
 
-		<jdk.version>1.7</jdk.version>
-		
-		<tomcat.version>8.5.28</tomcat.version>
-
-		<maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
 	</properties>
 
 	<build>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>${maven-compiler-plugin.version}</version>
+				<version>3.8.0</version>
 				<configuration>
-					<source>${jdk.version}</source>
-					<target>${jdk.version}</target>
+					<release>11</release>
 				</configuration>
 			</plugin>
 		</plugins>
